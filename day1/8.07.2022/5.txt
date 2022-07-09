@@ -1,0 +1,32 @@
+#include <vector>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int imax = 0;
+	int imax1 = 0;
+	int n , m;
+	cin >> n >> m;
+	int arr[100][100];
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cin >> arr[i][j];
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			
+			if (arr[i][j] > arr[imax][imax1])
+			{
+				imax = i;
+				imax1 = j;
+			}
+		}
+	}
+	cout << imax << " " << imax1;
+	return 0;
+}

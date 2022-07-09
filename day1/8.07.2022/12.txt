@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int a, kol = 0;
+  cin >> a;
+  while (a != 0) {
+      kol+=a;
+      cin >> a;
+  }
+    cout << kol;
+  return 0;
+}

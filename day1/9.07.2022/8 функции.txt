@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cmath>
+using namespace std; 
+
+int rec()
+{
+	int n;
+	cin >> n;
+	if (n == 0)
+	{
+		return 0;
+	}
+	else if (n != 0)
+	{
+		return  n + rec();
+	}
+}
+
+int main()
+{
+	cout << rec();
+}
