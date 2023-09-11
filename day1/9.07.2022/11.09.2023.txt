@@ -1,0 +1,35 @@
+2 задача
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin >> t;
+    vector<vector<int>> cases;
+    for (int k = 0; k < t; k++) {
+        int n;
+        cin >> n;
+        int counter = 0;
+        vector<int> numbers;
+        while (n != 0) {
+            int number = (n % 10) * (int)pow(10, counter);
+            n /= 10;
+            counter++;
+            if (number != 0) {
+                numbers.push_back(number);
+            }
+        }
+        cases.push_back(numbers);
+    }
+ 
+    for (int k = 0; k < t; k++) {
+        vector<int> numbers = cases[k];
+        cout << numbers.size() << endl;
+        for (int i = 0; i < numbers.size(); i++) {
+            cout << numbers[i] << " ";
+        }
+        cout << endl;
+    }
+}
